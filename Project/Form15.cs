@@ -173,6 +173,7 @@ namespace Project
         {
             if (textBox1.Text == "0")
             {
+
                 Management.E_B_table = "ว่าง";
                 this.Close();
                 

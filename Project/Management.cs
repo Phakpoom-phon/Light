@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace Project
 {
-    // test
+    
     public partial class Management : Form
     {
         MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=sijin;port=4306;persistsecurityinfo=True");
@@ -136,38 +136,17 @@ namespace Project
 
             NumberCustomer numCus = new NumberCustomer();
             Button button = sender as Button;
+            var test1 = button.Text;
             if (button.BackColor == Color.Gainsboro)
             {
-                var test1 = button.Text;
+                
                 numCus.tableName = test1;
                 numCus.ShowDialog();
             }
             else if (button.BackColor == Color.FromArgb(255, 128, 128))
             {
                 Orderfood of = new Orderfood();
-                con.Open();
-                MySqlCommand cm = new MySqlCommand("SELECT `order`.tableName,`order`.numCustomer,ordermenu.orderMenu_type,ordermenu.orderMenu_name,ordermenu.orderMenu_amt,ordermenu.orderMenu_price FROM `order` INNER JOIN ordermenu on `order`.tableNumber = ordermenu.tableNumber WHERE ord_status ='กำลังทำงานอยู่'");
-                cm.Connection = con;
-                dr = cm.ExecuteReader();
-                //var ls = new List<Orderfood>();
-                //int i = 0;
-                
-                while (dr.Read())
-                {
-                    //Console.WriteLine(dr[0].ToString()); // ชื่อโต๊ะ
-                    of.NewtableName = dr[0].ToString();
-
-                    //Console.WriteLine(dr[1]); // จำนวนลูกค้า
-                    //of.NewCustomer = dr[1].ToString();
-
-                    //Console.WriteLine(dr[2]); // ประเภท
-
-                    //Console.WriteLine(dr[3]); // ชื่ออาหาร
-                    //Console.WriteLine(dr[4]); // จำนวนอาหาร
-                    //Console.WriteLine(dr[5]); // ราคาอาหาร
-                    //Console.WriteLine(dr[6]);
-                }
-                con.Close();
+                of.tableName = test1;
                 of.ShowDialog();
             }
             

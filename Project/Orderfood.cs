@@ -135,20 +135,19 @@ namespace Project
 
         private void Orderfood_Load(object sender, EventArgs e)
         {
-        // NewtableName;
-        // NewCustomer;
-        // Newtype;
-        // Newname;
-        // Newamt;
-        // Newprice;
-            
+            // NewtableName;
+            // NewCustomer;
+            // Newtype;
+            // Newname;
+            // Newamt;
+            // Newprice;
+
 
             button2.Text = tableName;
-            //button2.Text = changeTable;
             label4.Text = "จำนวนลูกค้า : " + txt;
 
-            button2.Text = NewtableName;
-            label4.Text = "จำนวนลูกค้า : " + NewCustomer;
+            //button2.Text = NewtableName;
+            //label4.Text = "จำนวนลูกค้า : " + NewCustomer;
 
             timer1.Start();
             timer1.Stop();
@@ -158,7 +157,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูแนะนำ' ");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -174,6 +173,48 @@ namespace Project
                 i++;
             }
             con.Close();
+
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand(
+            "SELECT `order`.tableName,`order`.numCustomer,ordermenu.orderMenu_type,ordermenu.orderMenu_name,ordermenu.orderMenu_amt,ordermenu.orderMenu_price FROM `order` " +
+            "INNER JOIN ordermenu on `order`.tableNumber = ordermenu.tableNumber WHERE ord_status ='กำลังทำงานอยู่' && orderMenu_type = 'อาหาร' && `order`.tableName = '" + tableName + "'", con);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            da.Fill(ds, "testTable");
+            con.Close();
+
+            dt = ds.Tables["testTable"];
+            int x ;
+            for (x = 0; x <= dt.Rows.Count - 1; x++)
+            {
+                listView1.Items.Add(dt.Rows[x].ItemArray[3].ToString());
+                listView1.Items[x].SubItems.Add(dt.Rows[x].ItemArray[4].ToString());
+                listView1.Items[x].SubItems.Add(dt.Rows[x].ItemArray[5].ToString());
+                listView1.Items[x].SubItems[0].BackColor = Color.FromArgb(128, 255, 128);
+                //listView1.BackColor = Color.FromArgb(128, 255, 128);
+            }
+
+            con.Open();
+            MySqlCommand cmd2 = new MySqlCommand(
+            "SELECT `order`.tableName,`order`.numCustomer,ordermenu.orderMenu_type,ordermenu.orderMenu_name,ordermenu.orderMenu_amt,ordermenu.orderMenu_price FROM `order` " +
+            "INNER JOIN ordermenu on `order`.tableNumber = ordermenu.tableNumber WHERE ord_status ='กำลังทำงานอยู่' && orderMenu_type = 'เครื่องดื่ม' && `order`.tableName = '" + tableName + "'", con);
+            MySqlDataAdapter da2 = new MySqlDataAdapter(cmd2);
+            DataSet ds2 = new DataSet();
+            DataTable dt2 = new DataTable();
+            da2.Fill(ds2, "testTable");
+            con.Close();
+
+            dt2 = ds2.Tables["testTable"];
+            int y;
+            for (y = 0; y <= dt2.Rows.Count - 1; y++)
+            {
+                listView2.Items.Add(dt2.Rows[y].ItemArray[3].ToString());
+                listView2.Items[y].SubItems.Add(dt2.Rows[y].ItemArray[4].ToString());
+                listView2.Items[y].SubItems.Add(dt2.Rows[y].ItemArray[5].ToString());
+                listView2.Items[y].SubItems[0].BackColor = Color.FromArgb(128, 255, 128);
+            }
+
         }
 
         //public string txt;
@@ -371,7 +412,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูแนะนำ'");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -397,7 +438,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูกุ้ง'");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -462,7 +503,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูปลา'");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -527,7 +568,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูปู'");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -592,7 +633,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูหอย'");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -657,7 +698,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูปลาหมึก'");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -722,7 +763,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูต้ม'");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -786,7 +827,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูตำ/ยำ'");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -850,7 +891,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูผัด'");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -914,7 +955,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูทอด'");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -979,7 +1020,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูอาหารจานด่วน'");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -1043,7 +1084,7 @@ namespace Project
             MySqlCommand cm = new MySqlCommand("SELECT * FROM menu WHERE menu_type ='เมนูเครื่องดื่ม'");
             cm.Connection = con;
             dr = cm.ExecuteReader();
-            var ls = new List<Orderfood>();
+            //var ls = new List<Orderfood>();
             int i = 0;
             while (dr.Read())
             {
@@ -1170,6 +1211,11 @@ namespace Project
         private void button15_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

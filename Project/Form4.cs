@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace Project
 {
     public partial class Form4 : Form
     {
+        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=sijin;port=4306;persistsecurityinfo=True");
+        MySqlCommand cmd = new MySqlCommand();
+        MySqlDataReader dr;
         public int salesNumber { get; set; }
         public string salesDate { get; set; }
         public int table { get; set; }
@@ -39,8 +43,25 @@ namespace Project
         private void Form4_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            var date = DateTime.Now.ToString("d/M/yyyy");
-            var salesNumber4 = DateTime.Now.ToString("dMyy004");
+            var date = DateTime.Now.ToString("yyyy-MM-dd");
+            
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT `tableNumber`, `ord_d`, `tableName` , `ord_status` FROM `order` WHERE ord_d = '" + date + "'", con);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            da.Fill(ds, "testTable");
+            con.Close();
+
+            dt = ds.Tables["testTable"];
+            int x;
+            for (x = 0; x <= dt.Rows.Count - 1; x++)
+            {
+                listView1.Items.Add(dt.Rows[x].ItemArray[0].ToString());
+                listView1.Items[x].SubItems.Add(dt.Rows[x].ItemArray[1].ToString());
+                listView1.Items[x].SubItems.Add(dt.Rows[x].ItemArray[2].ToString());
+            }
+            /*var salesNumber4 = DateTime.Now.ToString("dMyy004");
             var salesNumber3 = DateTime.Now.ToString("dMyy003");
             var salesNumber2 = DateTime.Now.ToString("dMyy002");
             var salesNumber1 = DateTime.Now.ToString("dMyy001");
@@ -55,7 +76,7 @@ namespace Project
                 lvi.SubItems.Add(item.salesDate);
                 lvi.SubItems.Add(item.table.ToString());
                 this.listView1.Items.Add(lvi);
-            }
+            }*/
 
             //var date = DateTime.Now.ToString("d/M/yyyy");
             /*
@@ -67,7 +88,7 @@ namespace Project
             public int Food_tax { get; set; }
             public decimal Food_alltotal { get; set; }
             */
-
+            /*
             var lvs = new List<Form4>();
             int price = 20;
             int num = 2;
@@ -89,13 +110,13 @@ namespace Project
 
                 this.listView2.Items.Add(lvis);
             }
-
+            */
             
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            textBox2.Text = DateTime.Now.ToString("d/M/yyyy");
+            textBox2.Text = DateTime.Now.ToString("yyyy-MM-dd");
             //textBox2.Text = DateTime.Now.ToString("dMyy");
             //textBox8.Text = DateTime.Now.ToString("d/M/yyyy");
         }
