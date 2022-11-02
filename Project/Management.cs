@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace Project
 {
-    
+    // test
     public partial class Management : Form
     {
         MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=sijin;port=4306;persistsecurityinfo=True");
