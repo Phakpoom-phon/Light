@@ -439,6 +439,28 @@ namespace Project
                 x++;
 
             }
+            var dateToday = DateTime.Now.ToString("yyyy-MM-dd");
+            con.Open();
+            MySqlCommand cm = new MySqlCommand("SELECT `ord_d`, `numCustomer` FROM `order` WHERE ord_d = '" + dateToday + "'", con);
+            cm.Connection = con;
+            dr = cm.ExecuteReader();
+            int lb4 = int.Parse(label4.Text);
+            while (dr.Read())
+            {
+                lb4 += int.Parse(dr[1].ToString());
+            }
+            label4.Text = lb4.ToString();
+            con.Close();
+
+            con.Open();
+            MySqlCommand cm2 = new MySqlCommand("SELECT COUNT(*) FROM `order` WHERE ord_d = '" + dateToday + "'", con);
+            Int32 count = Convert.ToInt32(cm2.ExecuteScalar());
+
+            label3.Text = (count).ToString();
+            con.Close();
+
+
+
         }
     }
-    }
+}

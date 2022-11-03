@@ -74,11 +74,9 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(17, 16);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(316, 537);
+            this.groupBox1.Size = new System.Drawing.Size(237, 436);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ค้นหารายการขาย";
@@ -92,10 +90,9 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(8, 130);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Location = new System.Drawing.Point(6, 106);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(295, 398);
+            this.listView1.Size = new System.Drawing.Size(222, 324);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -103,26 +100,25 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "เลขที่การขาย";
-            this.columnHeader1.Width = 85;
+            this.columnHeader1.Text = "เลขการขาย";
+            this.columnHeader1.Width = 65;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "วันที่ขาย";
-            this.columnHeader2.Width = 80;
+            this.columnHeader2.Width = 74;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "โต๊ะ";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 50;
+            this.columnHeader3.Width = 74;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(212, 38);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(159, 31);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 66);
+            this.button1.Size = new System.Drawing.Size(69, 54);
             this.button1.TabIndex = 1;
             this.button1.Text = "ค้นหา";
             this.button1.UseVisualStyleBackColor = true;
@@ -131,20 +127,18 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Control;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(8, 75);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(6, 61);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 29);
+            this.textBox2.Size = new System.Drawing.Size(147, 24);
             this.textBox2.TabIndex = 0;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 38);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(7, 31);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 29);
+            this.textBox1.Size = new System.Drawing.Size(146, 24);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "  ค้นหารายการขาย";
             // 
@@ -165,11 +159,9 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(341, 16);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(256, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(688, 537);
+            this.groupBox2.Size = new System.Drawing.Size(516, 436);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "รายละเอียดการขาย";
@@ -179,38 +171,34 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(476, 418);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(357, 340);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 52);
+            this.panel1.Size = new System.Drawing.Size(153, 43);
             this.panel1.TabIndex = 4;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(141, 16);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(106, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 17);
+            this.label8.Size = new System.Drawing.Size(13, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "0";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 16);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(3, 13);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 17);
+            this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 0;
             this.label7.Text = "รายการชำระเงิน";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(580, 501);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(435, 407);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
             this.button2.Text = "ปิด";
             this.button2.UseVisualStyleBackColor = true;
@@ -229,10 +217,9 @@
             this.listView2.FullRowSelect = true;
             this.listView2.GridLines = true;
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(12, 162);
-            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView2.Location = new System.Drawing.Point(9, 132);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(667, 248);
+            this.listView2.Size = new System.Drawing.Size(501, 202);
             this.listView2.TabIndex = 2;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -281,123 +268,111 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(132, 116);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Location = new System.Drawing.Point(99, 94);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(151, 22);
+            this.textBox5.Size = new System.Drawing.Size(114, 20);
             this.textBox5.TabIndex = 1;
             this.textBox5.Text = "ลูกค้าทั่วไป";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(376, 75);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Location = new System.Drawing.Point(282, 61);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(303, 64);
+            this.textBox7.Size = new System.Drawing.Size(228, 53);
             this.textBox7.TabIndex = 1;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(132, 75);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Location = new System.Drawing.Point(99, 61);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(151, 22);
+            this.textBox4.Size = new System.Drawing.Size(114, 20);
             this.textBox4.TabIndex = 1;
             this.textBox4.Text = "ลูกค้าทั่วไป เงินสด";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(541, 38);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Location = new System.Drawing.Point(406, 31);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(137, 22);
+            this.textBox8.Size = new System.Drawing.Size(104, 20);
             this.textBox8.TabIndex = 1;
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(372, 37);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Location = new System.Drawing.Point(279, 30);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(91, 22);
+            this.textBox6.Size = new System.Drawing.Size(69, 20);
             this.textBox6.TabIndex = 1;
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox3.Location = new System.Drawing.Point(132, 37);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Location = new System.Drawing.Point(99, 30);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(151, 22);
+            this.textBox3.Size = new System.Drawing.Size(114, 20);
             this.textBox3.TabIndex = 1;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(472, 41);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(354, 33);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 17);
+            this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 0;
             this.label6.Text = "วันที่ขาย";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(332, 75);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(249, 61);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 17);
+            this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "ที่อยู่";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(332, 38);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(249, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 17);
+            this.label4.Size = new System.Drawing.Size(24, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "โต๊ะ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 119);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(17, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 17);
+            this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "ประเภทลูกค้า";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 79);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(17, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 17);
+            this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "ชื่อลูกค้า";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(17, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "เลขที่การขาย";
             // 
@@ -407,13 +382,12 @@
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 567);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "รายการค้นหาการขาย";
