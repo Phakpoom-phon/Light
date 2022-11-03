@@ -128,7 +128,7 @@ namespace Project
         {
             Form15 f15 = new Form15();
             f15.total = textBox4.Text;
-           
+            f15.tableName = tableName;
             f15.ShowDialog();
 
         }
@@ -1140,7 +1140,7 @@ namespace Project
             }
             con.Close();
         }
-        int i = Convert.ToInt32(DateTime.Now.ToString("dMyy001"));
+        int i = Convert.ToInt32(DateTime.Now.ToString("dMyy004"));
         private void button16_Click(object sender, EventArgs e)
         {
             

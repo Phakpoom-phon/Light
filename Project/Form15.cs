@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,10 +11,16 @@ using System.Windows.Forms;
 
 namespace Project
 {
+    
     public partial class Form15 : Form
     {
+        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=sijin;port=4306;persistsecurityinfo=True");
+        MySqlCommand cmd = new MySqlCommand();
+        MySqlDataReader dr;
         public string total;
-        
+        public string tableName;
+
+
         public Form15()
         {
             InitializeComponent();
@@ -29,6 +36,7 @@ namespace Project
             textBox1.Text = total;
             label4.Text = total;
             textBox3.Text = "-" + total;
+
             //int txt1 = 
         }
 
@@ -173,13 +181,20 @@ namespace Project
         {
             if (textBox1.Text == "0")
             {
-
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand("UPDATE `order` SET `ord_status` = 'สิ้นสุดการขาย' WHERE `order`.`tableName` = '" + tableName +"' && `order`.`ord_status` = 'กำลังทำงานอยู่'",con);
+                cmd.ExecuteNonQuery();
+                con.Close();
                 Management.E_B_table = "ว่าง";
                 this.Close();
                 
             }
             else
             {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand("UPDATE `order` SET `ord_status` = 'สิ้นสุดการขาย' WHERE `order`.`tableName` = '" + tableName + "' && `order`.`ord_status` = 'กำลังทำงานอยู่'", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
                 MessageBox.Show(textBox1.Text);
                 Management.E_B_table = "ว่าง";
                 this.Close();
